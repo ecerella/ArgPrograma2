@@ -1,0 +1,61 @@
+#titulo {
+    color: tomato;
+}
+
+p.especial {
+    color: mediumseagreen;
+}
+
+p.texto {
+    color: slateblue;
+}
+
+div p {
+    color: aquamarine;
+}
+
+div h2, div h3 {/* esto es un comentario */
+    color: brown;
+}
+
+* {
+    font-size: 24px;
+    color: black; /* esto es un comentario */
+}
+
+/* esto es un comentario */
+
+/*
+esto es un comentario
+de muchas
+lineas
+*/
+
+.color {
+    /* color: rgb(0, 255, 255); */
+    border: 4px black solid;
+    /* 
+        dotted
+        dashed
+        solid
+        double
+        groove
+        ridge
+        inset
+        outset
+        none
+        hidden
+    */
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5px;
+    border-width: 5px;
+}
+
+    #fondo {
+        background-color: rgba(255, 0, 0);
+        /*opacity: 0.3;*/
+        height: 300px;
+        background-image: url("cafe.jpeg");
+        background-size: cover;
+    }
