@@ -1,1 +1,9 @@
+$primary: #ec9016;
+$danger: #ff4136;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
