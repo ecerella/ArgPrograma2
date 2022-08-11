@@ -443,16 +443,16 @@ function clasificarValor(valor) {
     switch (valor) {
         case 1: // si valor es igual a 1 pasara esto
             respuesta = "alpha"; 
-            breack; //para la ejecucion de switch
+            break; //para la ejecucion de switch
         case 2: // si valort es igual a 2 
             respuesta = "beta";
-            breack;
+            break;
         case 3: // si valor es igual a 3
             respuesta = "gamma";
-            breack;
+            break;
         case 4: // si valor es igual a 4
             respuesta = "delta";
-            breack;
+            break;
     }
     return respuesta;
 }
@@ -468,10 +468,10 @@ switch (producto){
         break;
     case "hamburguesa":
         console.log("las hamburguesas cuestan $6.78"); //se muestra en consola
-        breack;
+        break;
     case "helado":
         console.log("el helado cuesta $2.8");
-        breack;
+        break;
 }
 
 //sentencia switch, opcion predeterminada
@@ -480,16 +480,16 @@ function seleccionarIdioma(valor){
     switch (valor){
         case 1:
             idioma = "español";
-            breack;
+            break;
         case 2:
             idioma = "frances";
-            breack;
+            break;
         case 3:
             idioma = "italiano";
             break;
-        default
+        default:
             idioma = "ingles";
-            breack;
+            break;
     }
     return idioma;
 }
@@ -504,11 +504,11 @@ function clasificarVolumen(valor) {
         case 1:
             volumen = "bajo";
             breack;
-        case 2:
+        case 2: //dos valores cumpliran esa funcion.
         case 3:
             volumen = "intermedio";
             break;
-        case 4:
+        case 4: //tres de los valores ejecutaran el volumen alto
         case 5:
         case 6:
             volumen = "alto";
@@ -516,3 +516,146 @@ function clasificarVolumen(valor) {
     }
     return volumen;
 }
+
+console.log(clasificarVolumen(1)); //volumen bajo (valor 1)
+console.log(clasificarVolumen(5)); //volumen alto (valor 5)
+
+//retornar boleanos
+function esMenorQue(a, b){
+    if (a < b) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//reemplazar un condicional usado para retornar un boleano
+function esMenorQue(a, b) {
+    return a < b;
+}
+console.log(esMenorQue(3, 3));
+
+//patron de retorno anticipado util para detener funcion en accion especifica
+function miFuncion() {
+    console.log("hola");
+    return "mundo"; //lo que este despues de un return no se ejecuta
+    console.log("adios"); //esta linea no se ejecuta! (error codigo inaccesible)
+}
+
+console.log(miFuncion()); // entrega hola mundo
+
+function calcularRaizCuadrada(num) {
+    if (num < 0) { //si la condicion es true el codigo para en undefined
+        return undefined;
+    }
+    return Math.sqrt(num);
+}
+
+console.log(calcularRaizCuadrada(25)); // la condicion es falsa se resuelve la raiz cuadrada
+console.log(calcularRaizCuadrada(-5)); // la condicion es true se termina en undefined
+
+
+//contar cartas de black jack
+var conteo = 0;
+function contarCartas(carta) {
+    var decision;
+    switch (carta) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+        conteo++;
+        break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+        conteo--;
+        break;
+    }
+    if (conteo > 0){
+        decision = "apostar";
+    } else {
+        decision = "esperar";
+    }
+    return conteo + " " + decision;
+}
+
+console.log(contarCartas(2)) // la decision es apostar
+console.log(contarCartas(K)) // la decision es apostar descuenta 1
+console.log(contarCartas(A)) // la decision es esperar el valor es 0
+
+
+//objetos en javascript
+var miPerro = { //definimos un objeto en una variable
+    "nombre": "mancha", //entre llaves definimos una secuencia de pares de propiedades y valores
+    "edad": 5, 
+    "peso": 6,
+    "raza": "beagle"
+}; //siempre termina en el cierre de llave con ;
+
+//acceder a propiedades de un objeto. notacion de punto
+//queremos trabajar con el nombre del ejemplo anterior
+
+miPerro.nombre; //le dice a java que quiero la propiedad nombre de objeto miPerro
+console,log(miPerro.raza); //devuelve beagle
+
+//acceder a propiedades: Notacion de corchetes
+var miCuaderno = {
+    "color": "verde",
+    "categoria": 3,
+    "numero de paginas": 200,
+    "numero de hojas": 100
+};
+
+console.log(miCuaderno["color"]); //nos permite acceder a propiedades con espacios
+console.log(miCuaderno["numero de hojas"]);//nombre de propiedad entre comillas con espacios interiores
+
+//acceder a propiedades de objetos con variables
+var resultados = {
+    1: "hector567",
+    2: "jose342",
+    3: "maria756",
+    4: "alberto734"
+};
+
+var posicion = 4;
+console.log(resultados[posicion]); // alberto734
+
+//actualizar propiedades
+var mochila = {
+    "color": "azul",
+    "tamaño": "mediano",
+    "contenido": ["botella de agua", "cuaderno"]
+};
+
+console.log(mochila.color); //azul
+mochila.color = "verde"; //actualizo valor de propiedad color a verde
+console.log(mochila.color); //verde
+
+console.log(mochila.contenido); //botella de agua, cuaderno
+mochila.contenido.push("lapiz") //push agrega item al final de lista
+console.log(mochila.contenido); //botella de agua, cuaderno, lapiz
+
+//agregar propiedades
+var curso = {
+    "titulo": "aprende javascript",
+    "idioma": "español",
+    "duracion": 30
+};
+
+curso.vistas = 34500;
+console.log(curso.vistas);
+
+
+
+
+
+
+
+
+
+
+
