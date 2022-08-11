@@ -1,0 +1,37 @@
+{
+    "nombre": "laura",
+    "apellido": "rodriguez",
+    "edad": 24,
+    "precioAsiento": 200.24,
+    "pagado": true,
+    "asiento": {
+        "numero": 13,
+        "letra": "F",
+        "cargador": false
+    },
+    "historial": [
+        {
+            "salida": "nueva york",
+            "destino": "chicago",
+            "fecha": "10/10/2020"
+        },
+        {
+            "salida": "madrid",
+            "destino": "barcelona",
+            "fecha": "09/09/2020"
+        } 
+    ]
+},
+{
+    "nombre": "juan",
+    "apellido": "cervantes",
+    "edad": 32,
+    "precioAsiento": 280,
+    "pagado": false,
+    "asiento": {
+        "numero": 10,
+        "letra": "j",
+        "cargador": true
+    },
+    "historial": []
+})
