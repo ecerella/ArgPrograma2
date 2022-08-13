@@ -14,6 +14,11 @@ class petShop{
         this.direccion = direccionUser;
         this.numero = numeroUser;
     }
+
+    obtenerDatos():string {
+        return this.nombre;
+    }
 }
-let petShopSoftware = new petShop("ezequiel", "cerella", "willy", "beagle", "ceballos", 991);
-console.log(petShopSoftware);
+let petSoftware = new petShop("ezequiel", "cerella", "willy", "beagle", "ceballos", 991);
+
+console.log(petSoftware.obtenerDatos());
