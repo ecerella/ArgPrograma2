@@ -7,7 +7,10 @@ var petShop = /** @class */ (function () {
         this.direccion = direccionUser;
         this.numero = numeroUser;
     }
+    petShop.prototype.obtenerDatos = function () {
+        return this.nombre;
+    };
     return petShop;
 }());
-var petShopSoftware = new petShop("ezequiel", "cerella", "willy", "beagle", "ceballos", 991);
-console.log(petShopSoftware);
+var petSoftware = new petShop("ezequiel", "cerella", "willy", "beagle", "ceballos", 991);
+console.log(petSoftware.obtenerDatos());

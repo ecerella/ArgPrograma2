@@ -16,7 +16,7 @@ class petShop{
     }
 
     obtenerDatos():string {
-        return this.nombre;
+        return this.nombre + this.apellido + this.mascota + this.raza;
     }
 }
 let petSoftware = new petShop("ezequiel", "cerella", "willy", "beagle", "ceballos", 991);
