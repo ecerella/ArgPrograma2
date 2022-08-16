@@ -957,7 +957,7 @@ do {
     console.log(x);
     x++;
 }while (x < 10);
-*/
+
 
 var contactos = [ //tres contactos (como objetos) pero elementos de array
     { //indice 0
@@ -992,3 +992,294 @@ function buscarPerfil(nombre, propiedad) {
 //console.log(buscarPerfil("nora", "gustos")); //devuelve pizza y programacion
 //console.log(buscarPerfil("diego", "gustos")); //devuelve cafe y magia
 console.log(buscarPerfil("Bob", "numero")); //devuelve el contacto no esta en la lista
+
+
+//nros enteros aleatorios
+function generarFraccionAleatoria() {
+    return Math.random(); // entre 0 y 1 pero nunca 1
+}
+
+//floor trunca el decimal, entrega nro entero
+var numeroAleatorioEntre0y19 = Math.floor(Math.random()*20); //
+console.log(numeroAleatorioEntre0y19); // devuelve el entero ya que floor elimina decimales
+
+
+function numeroEnteroAleatorio(limiteSuperior) {  //entre 0 y limiteSuperior sin incluirlo
+    return Math.floor(Math.random() * limiteSuperior); //retorna metodo floor y multiplica por limite sup.
+}
+for (var i = 0; i < 15; i++) { //repite salida de consola 15 veces 
+console.log(generarFraccionAleatoria(5)); //entre 0 y 5 sin 5
+}
+
+
+function rangoAleatorio (limiteInferior, limiteSuperior) {
+    return Math.floor(math.random() * (limiteSuperior + limiteInferior + 1)) + limiteInferior;))
+}// aca si se toma aleatorio entre minimo y maximo inclusive (+1)
+console.log(rangoAleatorio(3, 8);
+
+//funcion parseInt() representa una cadena en un nro. ("5" no es igual a 5) entrega valor entero
+
+var a = parseInt"5";
+var b = parseInt"7";
+
+console.log(a + b); //devuelve 12
+
+//funcion parseInt() con una base
+
+console.log(parseInt("110111", 2)); //(,2) como 2do argumento especifica base binario
+console.log(parseInt("3E0A", 16)); // (16) hexadecimal y devuelve entero decimal en todos los casos
+
+//condicional ternario
+
+function retornarMinimo(x, y) {
+    if (x < y) {
+        return x;
+    }else y {
+    }
+}
+//ahora compactamos lo anterior en una linea
+
+function retornarMinimo(x, y) {
+    return x < y ? x : y;// si esta condicion es true devuelve x sino devuelve y
+}
+
+console.log(retornar(4, 7)); // retorna 4
+
+//otro ejemplo
+var a = 5;
+var b = 9;
+
+console.log(a > b ? a + 2 : b * 3); // que devuelve? 27 por que a no es > entonces pasa a b*3
+
+
+//multiples operadores condicionales o ternarios
+function compararNumeros(a, b) {
+    if (a == b) {
+        return "a y b son iguales";
+    } else if (a > b) {
+        return "a es mayor que b";
+    }else{
+        return "b es mayor que a";
+    }
+}
+// como reemplazamos con ternarios
+
+function compararNumeros(a, b) {
+    return a < b ? "a es menor a b"
+         : a > b ?"a es mayor que b"
+        : "a es igual a b";
+}
+
+console.log(compararNumeros(11, 27)); //b es mayor que a
+
+
+// var vs let
+var campista = "james"; // declaracion var se puede hacer mas de una vez
+var campista = "david";
+
+let campista = "james"; // error el identificador ya fue declarado, no se puede
+    campista = "david"; //aca si estamos reasignando el valor
+
+//var variable global o local (dentro de funcion)
+var miVariableGlobal = 4;
+console.log(miVariableGlobal); //
+
+function miFuncion(){
+    console.log(miVariableGlobal); //
+
+    var miVariableLocal = 8;
+    console.log(miVariableGlobal);
+}
+miFuncion();
+
+console.log(miVariableGlobal);
+console.log (miVariableLocal); //error variable no definidA
+
+
+for (var i = 0; i < 3; i++) { //esta variable es global por estar en el programa principal
+    console.log(i); //si usamos let i=0 solo podriamos usar el valor dentro del ciclo. fuera da error
+}
+console.log(i); //podemos usarla aunque el ciclo termino
+
+
+var mostrarColor = true;
+if (mostrarColor) {
+    let color = "verde"; //variable let solo usable por el codigo dentro de {}
+    console.log("mi color favorito es: " + color);
+}  
+
+console.log(color); //fuera del bloque error color not defined ( si cambiamos let por var el error desaparece)
+
+//CONST para declarar variables (valor constante sin modificaciones)
+const MiCONSTANTE = 35;
+
+console.log(MICONSTANTE); //devuelve 35
+
+miConstante = 15 //error read-only, no se puede modificar valor
+//convencion las constantes se declaran en mayusculas
+
+function calcularAreaCirculo(radio) {
+    const PI = 3.14;
+
+    if (radio < 0) {
+        return undefined;
+    }
+    return PI * (radio ** 2);
+
+    console.log(calcularAreaCirculo(10)); //entrega 314
+}
+
+//mutar arreglo declarado con const 
+const MI_ARREGLO = [1, 2, 3, 4];
+
+MI_ARREGLO[0] = 5; //si podemos reasignar la estructura interna en un array
+MI_ARREGLO[1] = 6;
+MI_ARREGLO[2] = 7;
+MI_ARREGLO[3] = 8;
+
+console.log(MI_ARREGLO);
+
+//crear objeto inmutable (impedir la mutacion)
+let colores = {
+    "verde": "#10e04b",
+    "azul": "#1b50e0",
+    "negro": "#000000",
+    "blanco": "#ffffff",
+};
+
+Object.freeze(colores); //previene modificacion de objetos
+
+
+// funciones flecha (definir funciones anonimas)
+
+const fecha = function() { //definimos funcion anonima
+    return new Date(); //retorna objeto con fecha del sistema
+}
+//como transformamos en funcion flecha
+
+const fecha = () => new Date();//=> crea una funcion (sin parametros) flecha que retorna objeto
+
+//funciones flecha con parametros
+const sumarTres = (x) => x + 3; //funcion anonima x que entrega suma +3
+
+console.log(sumasTres(4)); /(/entrega 7
+
+//
+const concatenarArreglos = function(arr1, arr2) {
+    return arr1.concat(arr2); //teniendo arr1 llamamos funcion concat al arr2
+};
+
+console.log(concatenarArreglos([1, 2], [3, 4, 5])); //entrega [1, 2, 3, 4, 5]
+
+//convertirlo en funcion flecha
+
+const concatenarArreglos = (arr1, arr2) =>arr1.concat(arr2); //
+
+console.log(concatenarArreglos([1, 2], [3, 4, 5])); //entrega [1, 2, 3, 4, 5]
+
+
+//valores por defecto para parametros
+const incrementar = (num, valor = 1) => num + valor; // se aplica un valor por defecto por omision en entrada de datos
+
+//operador rest pasar cualquier nro de argumento y que se agrupe como regla
+function miFuncion(...args) { // ... operador. convierte los argumentos en arreglos
+    console.log(args);
+}
+
+miFuncion(1, 2, 3, 4)); // entrega [1, 2, 3, 4]
+
+//aplicar para pasar cualquier nro de argumentos
+
+const sumar = (...args) => { //cualquier nro de parametros a variable args
+    return args.reduce((a, b) => a+ b, 0); //.reduce() con estos argumentos suma los elementos del arreglo y retorna resultado
+                                           //pasamos funcion flecha como argumento
+}; 
+
+//operador spread (lo contrario al anterior) descompone arrays en valores unitarios
+const numeros = [1, 2, 3]; //declaramos arreglo
+
+function sumar (x, y, z) { //define funcion sumar de 3 nros x, y, z
+    return x + y + z;
+}
+console.log(sumar(...numeros)); //retorna 6
+
+//sintaxis de desestructuracion (asignar propiedades de objeto a variables)
+const usuario = { //tenemos un objeto que representa un usuario
+    nombre: "gino smith",  //tiene un campo nombre y edad
+    edad: 34
+};
+
+const nombre = usuario.nombre;  //a usuario asignamos nombre y propiedad a la antigua
+const edad = usuario.edad;      //idem 1 por linea
+
+const {nombre, edad} = usuario;  //todo en 1 linea: entre {nombres de variables}=objeto
+
+
+//otro ejemplo
+
+var cordenadas = {
+    x: 4,
+    y:6,
+    z: 12
+};
+
+//const x = cordenadas.x; // definiciones de una linea
+//const y = cordenadas.y;
+//const z = cordenadas.z;
+
+const {x, y, z} = coordenadas; //todo en una linea
+
+//sintaxis de desestructuracion objetos anidados
+const usuario = { //creamos objeto usuario
+    panchoVilla: {
+        edad: 27,       //datos de objeto edad, correo
+        correo: "panchoVilla@gmail.com"
+    }
+};
+
+const {panchoVilla: {edad: edadUser, correo: correoUser}} = usuario;  //dentro de {} que vamos a extraer
+                                                                      //edad: edadUser asignamos el valor a variable por que edad no esta definida en nuestro codigo
+
+console.log(edadUser);
+console.log(correoUser);
+
+
+const PRONOSTICO_LOCAL = {
+    "ayer": {
+        minima: 14,
+        maxima: 24
+    },
+    "hoy": {
+        minima: 16,
+        maxima: 28
+    },
+    "mañana": {
+        minima: 18,
+        maxima: 24
+    }
+}; //pronostico local del clima
+
+//const {hoy: {minima: minimaHoy}} = PRONOSTICO_LOCAL;// reemplaza a (const minimoHoy = PRONOSTICO_LOCAL.hoy.minima;
+//const {hoy: {maxima: maximaHoy}} = PRONOSTICO_LOCAL;//reemplaza a (const maximaHoy = PRONOSTICO_LOCAL.hoy.maxima;
+// lo anterior podria reemplazarse por
+const {hoy: {minima: minimaHoy, maxima: maximaHoy}} = PRONOSTICO_LOCAL;
+console.log(minimaHoy);
+console.log(maximaHoy); // se puede usar console.log(minimaHoy, maximaHoy);
+
+*/
+//sintaxis de desestructuracion arreglos
+var a; //declarar variables
+var b;
+var c;
+[a, b,,, c] = [1, 2, 3, 4, 5, 6]; // a la tercer variable le asignamos el valor 5
+
+//remover elementos de array
+const arregloInicial = [1, 2, 3, 4, 5, 6, 7 , 8];
+
+function removerTresPrimerosElementos(arreglo){
+    const [ , , , ...nuevoArreglo] = arreglo;
+    return nuevoArreglo;
+}
+
+const arregloFinal = removerTresPrimerosElementos(arregloInicial);
+console.log(arregloFinal); //entrega [4, 5, 6, 7, 8]
