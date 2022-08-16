@@ -989,6 +989,6 @@ function buscarPerfil(nombre, propiedad) {
     return "el contacto no esta en la lista de conrtactos";
 }
 
-console.log(buscarPerfil("nora", "gustos")); //devuelve pizza y programacion
-console.log(buscarPerfil("diego", "gustos")); //devuelve cafe y magia
+//console.log(buscarPerfil("nora", "gustos")); //devuelve pizza y programacion
+//console.log(buscarPerfil("diego", "gustos")); //devuelve cafe y magia
 console.log(buscarPerfil("Bob", "numero")); //devuelve el contacto no esta en la lista
