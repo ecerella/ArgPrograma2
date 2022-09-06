@@ -182,13 +182,13 @@ var game = function(){
     document.onkeydown = function(e){
         e = e || window.event;
         switch(e.keyCode){
-            case 81: // Q
-            case 65: // A
+            case 81: // Q (arriba player1)
+            case 65: // A (abajo player 1)
                 player1.keyCode = e.keyCode;
                 player1.keyPress = true;
             break;
-            case 79: // O
-            case 76: // L
+            case 79: // O (arriba player2)
+            case 76: // L (abajo player2)
                 player2.keyCode = e.keyCode;
                 player2.keyPress = true;
             break;
