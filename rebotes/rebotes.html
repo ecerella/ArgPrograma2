@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rebotes</title>
+    <style>
+        html { height: 100%}
+        body { height:100%; margin:0px; padding: 0px;}
+    </style>
+</head>
+<body id="body", onload="init()", onkeypress="keypress()">
+    <canvas id="canvas" style="background-color: black;">
+    </canvas>
+    <script>
+        class circulo{
+            constructor(context, maxX, maxY){
+                this.context = context;
+                this.maxX = maxX;
+                this.maxY = maxY;
+                this.radio = Math.floor(60*Math.random());
+                this.x =this.radio + Math.floor((maxX-this.radio-this.radio)*Math.random());
+                this.y =this.radio + Math.floor((maxY-this.radio-this.radio)*Math.random());
+                this.color = "#" + Math.floor(Math.random()* 0xffffff).toString(16);
+                this.dx =1;
+                this.dy=1;
+            }
+            dibujar(){
+                this.context.beginPath();
+                this.context.fillStyle=this.color;
+                this.context.arc(this.x, this.y, this.radio, 0, Math.PI*2, true);
+                this.context.closePath();
+                this.context.fill();
+            }
+            mover(){
+                this.x += this.dx;
+                this.y += this.dy;
+
+                if ((this.x+this.radio>this.maxX)||(this.x-this.radio<0))
+                {
+                    this.dx=-this.dx;
+                }
+                if ((this.y+this.radio>this.maxY)||(this.y-this.radio<0))
+                {
+                    this.dy=-this.dy;
+                }
+            }
+        }
+
+    </script>
+    <script>
+        var imagenes = [];
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        function init(){
+            canvas.width = document.getElementById("body").clientWidth;
+            canvas.height = document.getElementById("body").clientHeight;
+
+            setInterval(()=>{
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                imagenes.map( (imagen, i) => {
+                    imagen.mover();
+                    imagen.dibujar();
+                });
+            }, 10)
+        }
+        function keypress(){
+            var circulo = new circulo (context, canvas.width, canvas.height);
+            imagenes.push(circulo);
+        }
+    </script>
+</body>
+</html>
