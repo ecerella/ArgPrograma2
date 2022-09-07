@@ -1,0 +1,29 @@
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /*porcentaje de columnas*/
+    /*grid-template-rows: 200px 400px; /*agregando tamaño puede ser igual arriba*/
+    gap: 1em; /*espaciado entre columnas (columngap "columnas" rowgap"filas)*/
+}
+
+.grilla-anidada{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*creeo columnas dentro de grilla*/
+    grid-auto-rows: 100px; /*el area que ocupa cada grilla anidada*/
+    gap: 1em; /*tamaño de espaciado entre cada)*/
+}
+
+.grilla-anidada > div{
+    border: 1px solid #000;
+    background: #f1c40f;
+    padding: 1em;
+
+}
+
+.grilla > div {
+    background: #ecf0f1;
+    padding: 1em;
+}
+
+.grilla > div:hover {
+    border: 1px solid #f1c40f;
+}
