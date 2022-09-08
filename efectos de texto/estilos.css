@@ -1,0 +1,65 @@
+/*propiedades y efectos
+p{
+    width: 400px;
+    font-size: 40px;
+    border: 3px solid red;
+    /*writing-mode: vertical-rl; /*texto vertical lado derecho (lr lado izquierdo)
+
+}
+/*
+#texto{
+    text-overflow: ellipsis; /*avisa que hay texto fuera de caja
+    white-space: nowrap; /*coloca todo el texto en una linea
+    overflow: hidden; /*esconde el texto que quedo fuera de la caja
+}
+
+
+body {
+    background-color: bisque;
+}
+#texto{
+    width: 200px;
+    border: 3px solid brown;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px;
+    font-size: 24px;
+    margin: 0;
+    background-color: white;
+    resize: horizontal;
+}
+*/
+body {
+    font-family: monospace;
+    background: black;
+}
+.contenedor {
+    margin: auto;
+    display: table; /*limpia el flow*/
+}
+
+h1 {
+    float: left;
+    color: rgb(42, 138, 13);
+    position: relative;
+}
+
+h1 spam {
+    position: absolute; /* se va a posicionar respecto al h1 que es relativo*/
+    right: 0;
+    width: 0;
+    background: black;
+    border-left: 1px solid rgb(42, 138, 13); /*simula el cursor y esta siempre al final lado derecho del texto*/
+
+    animation-name: escribe 5s infinite alternate steps(40); /*duracion, repeticion, alternate hace que de impresion de borrado*/
+}
+
+@keyframes escribe {
+    from{
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
