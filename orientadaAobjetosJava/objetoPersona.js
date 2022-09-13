@@ -38,6 +38,7 @@ function Person(firstName, lastName, age, eyeColor) {
   
   var myEmployee = new Employee("Jane", "Roe", 34, "brown", "123 Sesame Street 98765"); // subclass method
   
+  
   myEmployee.lastName = "Doe";
   myEmployee.officeLocation = "245 Sesame Lane 98765";
   

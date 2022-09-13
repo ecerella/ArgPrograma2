@@ -1,0 +1,25 @@
+div{
+    /*width: 180px;
+    height: 180px;
+    background-color: orange;
+    border: 7px solid darkred;
+    /*transform: translateY(200px); /*mueve el contenedor en direccion x o y (estatico)*/
+    /*transform: rotateX(15); /*gira el elemento xgrados*/
+    /*transform: skewX(85); /*hace como un trapecio*/
+    /*transform: scale(2); /* se duplica obvio*/
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+
+}
+@keyframes skew {
+    0%{
+        transform: skew(20deg, 20deg);
+    }
+    100%{
+        transform: skew(-20deg, -20deg);
+    }
+}
