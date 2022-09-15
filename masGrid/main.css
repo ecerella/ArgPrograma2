@@ -27,17 +27,19 @@ body {
         text-transform: uppercase;
       }
 
+/* crear marco blanco que contiene todos los elementos */
 .container{
     background: #fff;
     width: 90%;
     max-width: 1000px;
     margin: 1.6em auto;
 
-    display: grid;
-    gap: 1.6em;
-    grid-template-columns:  repeat(5, 1fr);
+    display: grid; /*organizador de elementos del contenedor*/
+    gap: 1.6em; /*separacion entre contenedores*/
+    grid-template-columns:  repeat(5, 1fr); /*columnas para cont*/
 }
 
+/*aplico estilo a todos  los items del container*/
 .container >.header,
 .container >.content,
 .container >.footer,
@@ -48,15 +50,16 @@ body {
     border: 1px solid #000000;
 }
 
+/*ordenamos header y footer que son de 5 columnas*/
 .container .header,
 .container .footer {
-    grid-column: 1/6;
+    grid-column: 1/6; /*lineas verticales de la grilla de la 1 a la 6*/
     background: #03131f;
     color: #ffffff;
 }
 
 .container > .content{
-    grid-column: span 3;
+    grid-column: span 3; /*span abarca 3 columnas*/
 }
 
 .content > .article {
@@ -72,42 +75,46 @@ body {
 }
 
 .container > .sidebar{
-    grid-column: span 2;
+    grid-column: span 2; /*span abarca 2 columnas*/
     background: #485460;
     color: #ffffff;
-    display: flex;
+    display: flex; /*clase flexbox para centrar contenido*/
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.container .sidebar img{
+.container .sidebar img{ /*centrando y separando imagenes*/
     width: 100%;
     margin-top: 5px;
 }
 
+/*retocando las notas relacionadas del pie*/
 .container > .related-post{
     background: #2d3436;
     color: #ffffff;
     height: 180px;
-    display: flex;
+    display: flex; /*clase flexbox para centrar contenido*/
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease; /*mejora la animacion*/
 }
 
-.container > .related-post:hover {
+.container > .related-post:hover { /*efecto de cambio al pasar cursor*/
     cursor: pointer;
     color: #000000;
     background: #ffffff;
 }
 
-/*convirtiendo el sitio a responsive*/
+/*convirtiendo el sitio a responsive w3schools.com/css/css_rwd_mediaquerries.asp*/
 @media screen and (max-width: 768px) {
+    /*o sea en 768px como quiero que se vea el armado*/
+    /*el logo esta bien. article quiero al 100%. sidebar pasa a bajo,
+    y los relacionados uno debajo del otro*/
     .header{
         text-align: center;
     }
     .container .content{
-        grid-column: 1/-1;
+        grid-column: 1/-1; /* 1/-1 seria abarca todo el ancho posible*/
     }
     .container .sidebar{
         grid-column: 1/-1;
