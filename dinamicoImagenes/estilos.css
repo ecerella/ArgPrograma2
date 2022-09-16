@@ -58,9 +58,43 @@ header .categorias {
     flex-wrap: wrap;
 }
 
-headers .categorias a {
+header .categorias a {
     color: #9B9B9B;
     margin: 10px 20px;
     font-size: 18px;
     font-weight: 700;
+}
+
+header .categorias a.activo {
+    color: #000;
+}
+
+/*grid*/
+.grid {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+    opacity: 1;
+}
+
+.grid .item {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 10px;
+    width: calc(33.3333% -20px);
+}
+
+.grid .item-contenido {
+    position: relative;
+}
+
+.grid .item img {
+    width: 100%;
+    cursor: pointer;
+    vertical-align: top;
 }
