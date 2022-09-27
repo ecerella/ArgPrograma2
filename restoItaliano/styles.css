@@ -1,0 +1,135 @@
+/*custom propiertys*/
+:root{
+    --verde: #00a149;
+    --blanco: #fff;
+    --rojo: #881014;
+    --oscuro: #000;
+    --titulos: "Arima Madurai", cursive;
+    --parrafos: "Mulish", sans-serif;
+}
+
+/*respeta medida de cajas padre*/
+html{
+    box-sizing: border-box;
+    /*reinicio 1rem 10px*/
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+/*globales*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+h1, h2{
+    font-family: var(--titulos);
+}
+h3, p, a{
+    font-family: var(--parrafos);
+}
+img{
+    max-width: 100%;
+}
+.verde{
+    color: var(--verde);
+}
+.rojo{
+    color: var(--rojo);
+}
+.ocultar{
+    display: none;
+}
+.btn-cerrar{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--blanco);
+    position: absolute;
+    top: 0;
+    right: 50px;
+    user-select: none;
+}
+.pantalla-completa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 4; /*sobreposicion de elementos a mayor nro mas arriba*/
+}
+.btn-cerrar:hover{
+    cursor: pointer;
+}
+.btn{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+/*encabezado*/
+.contenedor-navegacion{
+    background-color: var(--oscuro);
+    position: relative;
+    z-index: 5; /*sobreposicion de elementos a mayor nro mas arriba*/
+}
+.contenido-navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo h2, .navegacion a {
+    color: var(--blanco);
+}
+.logo h2{
+    font-size: 3rem;
+}
+.navegacion a{
+    text-decoration: none;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    display: block; /*se ponen items uno a bajo del otro*/
+    transition: color .3s ease-in-out;
+    text-align: center;
+}
+.navegacion a:nth-child(even):hover{
+    color: var(--rojo);
+}
+.navegacion a:nth-child(odd):hover{
+    color: var(--verde);
+}
+.navegacion a:first-of-type{
+    margin-top: 5rem;
+}
+.navegacion{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 40rem;
+    padding: 3rem 4rem;
+    background-color: var(--oscuro);
+    animation: desplazamiento .5s ease-in-out;
+}
+.hamburguesa:hover{
+    cursor: pointer;
+}
+.hamburguesa span{
+    background-color: var(--blanco);
+    display: block; /*las tres lineas de span funcionan como bloque para editar*/
+    width: 5rem;
+    height: .5rem;
+    margin-bottom: .5rem;
+}
