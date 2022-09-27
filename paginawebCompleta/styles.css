@@ -1,5 +1,5 @@
-font-family: 'Poppins', sans-serif;
 
+/*globales*/
 *,
 *::before,
 *::after {
@@ -39,6 +39,7 @@ p{
     margin: 0 auto;
     padding: 0 2.4rem;
 }
+
 
 header{
     width: 100%;
@@ -81,7 +82,6 @@ header{
     justify-content: space-around;
     z-index: 1250;
     transform: translateX(-100%);
-    transition: transform .5s;
 }
 .nav::before{
     content: "";
@@ -97,7 +97,7 @@ header{
     transition: opacity .5s;
 }
 .open .fa-times{
-    display: none;
+    display: block;
 }
 .open .fa-bars{
     display: none;
@@ -128,10 +128,12 @@ header{
 .nav-link:hover{
     color: #3bcc75;
 }
+
+
 .hero{
     width: 100%;
     height: 70vh;
-    background: url(imagenes/hero.jpg) center no-repeat;
+    background: url("imagenes/hero.jpg") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -139,7 +141,7 @@ header{
 }
 .h2-sub{
     font-size: 3rem;
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #3bcc75;
     font-weight: 600;
     line-height: .4;
@@ -151,7 +153,7 @@ header{
 .head{
     color: #fff;
     font-size: 3.7rem;
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: .5rem;
@@ -162,7 +164,7 @@ header{
     margin: 0 1.6rem;
 }
 .he-des h5{
-    color #fff;
+    color: #fff;
     font-size: 1.4rem;
     font-weight: 100;
     text-transform: uppercase;
@@ -205,7 +207,7 @@ header{
     margin-right: -.7rem;
 }
 .global .h2-sub{
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     line-height: .42;
 }
 .res-info{
@@ -307,11 +309,11 @@ footer{
     font-size: 1.6rem;
     padding: 1px .6rem;
     position: absolute;
-    top 30%;
+    top: 30%;
     margin-left: 20.5rem;
 }
 
-@media screen and (min-width: 900px{
+@media screen and (min-width: 900px){
     section{
         padding: 7.9rem;
     }
@@ -333,9 +335,9 @@ footer{
         transition: initial;
     }
     .nav-item{
-        margin : 0 2.4rem;
+        margin: 0 2.4rem;
     }
-    .nav-item: last-child{
+    .nav-item:last-child{
         margin-right: 0;
     }
     .nav-link{
@@ -353,5 +355,45 @@ footer{
         left: 0;
         bottom: -3px;
     }
-    
+    .h2-sub{
+        font-size: 3rem;
+    }
+    .fil{
+        font-size: 3rem;
+    }
+    .head{
+        font-size: 4.7rem;
+        letter-spacing: 8rem;
+    }
+    .res-info{
+        display: flex;
+        align-items: center;
+    }
+    .res-info > div{
+        flex: 1;
+    }
+    .pad-rig{
+        padding-right: 7rem;
+    }
+    .footer-content{
+        max-width: 77.5rem;
+        margin: auto;
+    }
+    .footer-content-about{
+        max-width: 51.3rem;
+        margin: 0 auto 5.4rem;
+    }
+    .footer-div{
+        display: flex;
+        justify-content: space-between;
+    }
+    .social-media,
+    .news-form{
+        width: 100%;
+        max-width: 27.3rem;
+        margin: 0 1rem;
+    }
+    .news-btn{
+        margin-left: 7.5rem;
+    }
 }

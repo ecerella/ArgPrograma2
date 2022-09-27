@@ -22,22 +22,22 @@
                 <a href="#" class="logo">logo</a>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">inicio</a>
+                        <a href="#" class="nav-link active ">inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">menu</a>
+                        <a href="#" class="nav-link ">menu</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">reservaciones</a>
+                        <a href="#" class="nav-link ">reservas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">noticias</a>
+                        <a href="#" class="nav-link ">noticias</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">tienda</a>
+                        <a href="#" class="nav-link ">tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">contacto</a>
+                        <a href="#" class="nav-link ">contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -86,7 +86,7 @@
         <div class="container">
             <div class="global">
                 <h2 class="h2-sub">
-                    <span class="fil">p</span>latillos   
+                    <span class="fil">p</span>latos   
                 </h2>
                 <h1 class="head">lorem</h1>
             </div>
@@ -143,7 +143,7 @@
                 <div class="res-des pad-rig">
                     <div class="global">
                         <h2 class="h2-sub">
-                            <span class="fil">D</span>egusta
+                            <span class="fil">P</span>roba
                         </h2>
                         <h1 class="head hea-dark">delicioso menu</h1>
                         <div class="circle">
@@ -211,5 +211,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        const selectElement = function(element){
+            return document.querySelector(element);
+        }
+        let menuToggle = selectElement(".menu-toggle");
+        let body = selectElement("body");
+        menuToggle.addEventListener("click", function(){
+            body.classList.toggle("open");
+        })
+    </script>
 </body>
 </html>
