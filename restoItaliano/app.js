@@ -25,7 +25,10 @@ const botonCerrar = () =>{
     body.appendChild(overlay);
     btnCerrar.textContent = 'x';
     btnCerrar.classList.add('btn-cerrar');
-    navegacion.appendChild('btn-cerrar');
+    //while(navegacion.children[5]){
+    //    navegacion.removeChild(navegacion.children[5]);
+    //    }
+    navegacion.appendChild(btnCerrar);
     cerrarMenu(btnCerrar,overlay);
 }
 
