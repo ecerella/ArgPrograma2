@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+}
+body {
+    background: rgb(220,220,220);
+}
+#contenedor{
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    position: absolute;
+}
+#menu{
+    width: 100%;
+    height: 100%;
+    background: rgba(220, 220, 220, 1);
+    text-align: center;
+    box-shadow: 0.5px 1px 30px 0.5px rgba(100, 100, 100, 0.5);
+}
+#lista{
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+#lista ul{
+    list-style: none;
+    margin: 10px auto;
+}
+#lista ul li{
+    float: left;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+#imagen{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#imagen img{
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+}
+#contenido{
+    width: 90%;
+    height: 35vw;
+    margin: 30px auto;
+}
+#titulo{
+    width: 100%;
+    margin: 5px auto;
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+}
+#respuestaTabla{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow-y: auto;
+    background: #000;
+}
