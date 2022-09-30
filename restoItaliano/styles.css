@@ -86,11 +86,11 @@ img{
 }
 @media(min-width: 768px){
     .btn{
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
 .bordes{
-    border: 4px solid var(--blanco);
+    border: 3px solid var(--blanco);
 }
 @media(min-width: 768px){
     .bordes{
@@ -100,6 +100,20 @@ img{
 .bordes:hover{
     color: var(--verde);
     background-color: var(--blanco);
+}
+.btn-rojo{
+    background-color: var(--rojo);
+    font-weight: bold;
+    display: inline-block; /*agrego esto para conservar inline del boton y asignar margen*/
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.btn-verde{
+    background-color: var(--verde);
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--parrafos);
 }
 
 /*encabezado*/
@@ -190,7 +204,7 @@ img{
 }
 .texto-encabezado h2{
     color: var(--blanco);
-    font-size: 8rem;
+    font-size: 4rem;
 }
 @media(min-width: 768px){
     .texto-encabezado h2{
@@ -200,4 +214,119 @@ img{
 video{
     width: 100%;
     height: 100%;
+}
+/*alinear contenedor nosotros uno al lado del otro, texto e imagenes*/
+.contenedor-nosotros{
+    padding-top: 5rem;
+}
+@media(min-width: 768px){
+    .contenedor-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.texto-nosotros, .imagenes-nosotros{
+    flex: 0 0 calc(50% - 1rem);
+}
+.texto-nosotros .bienvenida{
+    font-size: 4rem;
+    color: var(--verde);
+    text-align: center;
+}
+@media(min-width: 768px){
+    .texto-nosotros .bienvenida{
+        text-align: left;
+    }
+}
+.texto-nosotros h1{
+    font-size: 5rem;
+    text-align: center;
+}
+@media(min-width: 768px){
+    .texto-nosotros h1{
+        text-align: left;
+    }
+}
+.texto-nosotros p{
+    font-size: 2rem;
+    text-align: center;
+}
+@media(min-width: 768px){
+    .texto-nosotros p{
+        text-align: left;
+    }
+}
+/*ahora las imagenes quiero que una ocupe 50% y las otras el restante*/
+.imagenes-nosotros{
+    display: flex;
+    justify-content: space-between; /*separacion*/
+}
+.imagenes-nosotros img{
+    border-radius: 5px;
+}
+.imagen1, .imagenes2{
+    flex: 0 0 calc(50% - 1rem); /*defino con flex ni mas grande ni chico y calc 50% menos borde*/
+}
+.imagenes2 img{
+    margin-bottom: 1rem;
+}
+.menu{
+    padding-top: 4rem;
+}
+/*platillos*/
+.texto-platillos{
+    text-align: center;
+    font-size: 5rem;
+}
+.botones-platillos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.botones-platillos button{
+    flex: 0 0 calc(50% - 1rem);
+    padding: 1rem 3rem;
+}
+@media(min-width:768px){
+    .botones-platillos{
+        display: inline-block;
+    }
+    .botones-platillos button{
+        flex: unset;
+    }
+}
+@media(min-width: 768px){
+    .platillos{
+        display: flex;
+        justify-content: space-between; /*agrego por el flex de .platillo"*/
+        flex-wrap:wrap;
+    }
+}
+.platillo{
+    flex: 0 0 calc(33.3% - 1rem); /*100% de espacio  disponible lo divide en 3 con separacion de 1*/
+    border: 1px solid #e1e1e1;
+    padding: 2rem;
+    border-radius: 5px;
+}
+.platillo h2{
+    text-align: center;
+}
+.platillo p{
+    font-size: 1.8rem;
+}
+.precio{
+    display: flex;
+    justify-content: space-between;
+}
+.precio p{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.precio button{
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-family: var(--parrafos);
 }
