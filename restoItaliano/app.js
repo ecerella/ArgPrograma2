@@ -41,9 +41,9 @@ const botonCerrar = () =>{
 //uso del observador para cargar imagenes por demanda//
 const observer = new IntersectionObserver((entries, observer)=>{
     entries.forEach(entry=>{
-        if(entry.isIntersecting){
+        if(entry.isIntersecting){ //cuando haya interseccion en pantalla//
             const imagen = entry.target;
-            imagen.src = imagen.dataset.src;
+            imagen.src = imagen.dataset.src; //lo que hay en data pasa al source//
             observer.unobserve(imagen);
         }
     });
@@ -79,7 +79,7 @@ const platillos = () =>{
 
     console.log(platillosArreglo.ensaladas)//quiero ver los arrays (sacar cuando funcione)//
 
-    mostrarPlatillos(ensaladas, pastas, pizzas, postres, todos);
+    mostrarPlatillos(ensaladas, pastas, pizzas, postres, platillosArreglo);
 }
 //funcion que recibe arreglo de platillos del mismo grupo//
 const mostrarPlatillos = (ensaladas, pastas, pizzas, postres, todos) =>{

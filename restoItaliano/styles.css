@@ -115,6 +115,9 @@ img{
     margin-bottom: 2rem;
     font-family: var(--parrafos);
 }
+.btn-verde:hover{
+    background-color: var(--rojo);
+}
 
 /*encabezado*/
 .contenedor-navegacion{
@@ -328,5 +331,71 @@ video{
     border: none;
     background-color: var(--rojo);
     color: var(--blanco);
-    font-family: var(--parrafos);
+    height: 3.8rem;
+}
+.separador{
+    background-image: url(assets/ensalada.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+}
+.separador::before{ /*agrego pseudo contenedor hijo de separador para difuminar*/
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: -1;
+}
+.contenido-separador{
+    padding: 5rem;
+}
+.contenido-separador h2{
+    font-size: 4rem;
+    color: var(--blanco);
+    text-align: center;
+}
+@media(min-width:768px){
+    .contenido-separador h2{
+        text-align: left;
+        font-size: 5rem;
+        color: var(--blanco);
+    }
+}
+.contenido-separador p{
+    color: var(--blanco);
+    font-size: 3rem;
+    text-align: center;
+}
+@media(min-width:768px){
+    .contenido-separador p{
+        text-align: left;
+    }
+}
+/*seccion del chef*/
+.chef h2{
+    background-color: var(--rojo);
+    display: inline-block;
+    padding: 1rem 3rem;
+    color: var(--blanco);
+    font-size: 4rem;
+}
+@media(min-width:768px){
+    .contenido-chef{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.texto-chef, .imagen-chef{
+    flex: 0 0 calc(50% - 1rem);
+}
+.texto-chef h3{
+    font-size: 3rem;
+}
+.texto-chef p{
+    font-size: 2rem;
 }

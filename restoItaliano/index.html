@@ -1,185 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Italian Resto</title>
-    <script src="https://kit.fontawesome.com/283335a286.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header class="encabezado">
-    <div class="contenedor-navegacion">
+    <script
+      src="https://kit.fontawesome.com/baa6b75a34.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="contenedor-navegacion">
         <div class="contenido-navegacion contenedor">
-            <div class="logo">
-                <h2>Ristorante <span class="verde">Mon</span><span>tazzo</span><span class="rojo">lli</span></h2>
-            </div>
-            <nav class="navegacion ocultar">
-                <a href="#">Inicio</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Menú</a>
-                <a href="#">Chef</a>
-                <a href="#">Contacto</a>
-            </nav>
-            <div class="hamburguesa">
-                <span></span><span></span><span></span>
-            </div>
+          <div class="logo">
+            <h2>
+              Ristorante <span class="verde">Mon</span><span>tazzo</span
+              ><span class="rojo">lli</span>
+            </h2>
+          </div>
+          <nav class="navegacion ocultar">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Menú</a>
+            <a href="#">Chef</a>
+            <a href="#">Contacto</a>
+          </nav>
+          <div class="hamburguesa"><span></span><span></span><span></span></div>
         </div>
-    </div>
-    <div class="contenido-header">
+      </div>
+      <div class="contenido-header">
         <div class="contenedor-encabezado">
-            <div class="texto-encabezado">
-                <h2>Acoglienza!</h2>
-                <a href="#" class="btn bordes">Il nostro menu</a>
-            </div>
-            <video autoplay loop muted>
-                <source src="assets/bg_video.mp4">
-            </video>
+          <div class="texto-encabezado">
+            <h2>Acoglienza!</h2>
+            <a href="#" class="btn bordes">Il nostro menu</a>
+          </div>
+          <video autoplay loop muted>
+            <source src="assets/bg_video.mp4" />
+          </video>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
     <div class="contenedor-nosotros">
-        <div class="texto-nosotros">
-            <p class="bienvenida">Bienvenido a</p>
-            <h1>Ristorante Montazzolli</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rerum dolores ut culpa quo iure officiis itaque laborum ab accusamus modi, repudiandae explicabo ducimus? Minus adipisci molestias illum quasi molestiae.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quibusdam harum ducimus odio rerum iusto ipsum accusantium, quaerat commodi recusandae eligendi consectetur dicta ipsam sunt autem facere deleniti veritatis nihil.
-            </p>
-            <a href="#" class="btn btn-rojo">Contactar</a>
+      <div class="texto-nosotros">
+        <p class="bienvenida">Bienvenido a</p>
+        <h1>Ristorante Montazzolli</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rerum
+          dolores ut culpa quo iure officiis itaque laborum ab accusamus modi,
+          repudiandae explicabo ducimus? Minus adipisci molestias illum quasi
+          molestiae. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Architecto quibusdam harum ducimus odio rerum iusto ipsum accusantium,
+          quaerat commodi recusandae eligendi consectetur dicta ipsam sunt autem
+          facere deleniti veritatis nihil.
+        </p>
+        <a href="#" class="btn btn-rojo">Contactar</a>
+      </div>
+      <div class="imagenes-nosotros">
+        <div class="imagen1">
+          <img data-src="assets/nosotros1.webp" alt="mujer comiendo pizza" />
         </div>
-        <div class="imagenes-nosotros">
-            <div class="imagen1">
-                <img data-src="assets/nosotros1.webp" alt="mujer comiendo pizza">
-            </div>
-            <div class="imagenes2">
-                <img data-src="assets/nosotros2.webp" alt="mujeres comiendo pizza">
-                <img data-src="assets/nosotros3.webp" alt="plato con pasta">
-            </div>
+        <div class="imagenes2">
+          <img data-src="assets/nosotros2.webp" alt="mujeres comiendo pizza" />
+          <img data-src="assets/nosotros3.webp" alt="plato con pasta" />
         </div>
+      </div>
     </div>
     <section class="menu contenedor">
-        <h2 class="texto-platillos">Platillos populares</h2>
-        <div class="botones-platillos">
-            <button class="todos btn btn-verde">Todos</button> <!--reutilizo las clases btn-->
-            <button class="ensaladas btn btn-verde">Ensaladas</button>
-            <button class="pasta btn btn-verde">Pasta</button>
-            <button class="pizza btn btn-verde">Pizza</button>
-            <button class="postres btn btn-verde">Postres</button>
+      <h2 class="texto-platillos">Platillos populares</h2>
+      <div class="botones-platillos">
+        <button class="todos btn btn-verde">Todos</button>
+        <!--reutilizo las clases btn-->
+        <button class="ensaladas btn btn-verde">Ensaladas</button>
+        <button class="pasta btn btn-verde">Pasta</button>
+        <button class="pizza btn btn-verde">Pizza</button>
+        <button class="postres btn btn-verde">Postres</button>
+      </div>
+      <div class="platillos">
+        <div class="platillo" data-platillo="ensalada">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/ensalada.webp" alt="ensalada" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
         </div>
-        <div class="platillos">
-            <div class="platillo" data-platillo="ensalada"> <!-- data para filtrar los platos -->
-                <img data-src="assets/ensalada.webp" alt="ensalada">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="ensalada"> <!-- data para filtrar los platos -->
-                <img data-src="assets/ensalada2.webp" alt="ensalada">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="ensalada"> <!-- data para filtrar los platos -->
-                <img data-src="assets/ensalada2.webp" alt="ensalada">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="pasta"> <!-- data para filtrar los platos -->
-                <img data-src="assets/pasta1.webp" alt="pasta">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="pasta"> <!-- data para filtrar los platos -->
-                <img data-src="assets/pasta2.webp" alt="pasta">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="pasta"> <!-- data para filtrar los platos -->
-                <img data-src="assets/pasta2.webp" alt="pasta">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="pizza"> <!-- data para filtrar los platos -->
-                <img data-src="assets/pizza1.webp" alt="pizza">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="pizza"> <!-- data para filtrar los platos -->
-                <img data-src="assets/pizza2.webp" alt="pizza">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>            <div class="platillo" data-platillo="pizza"> <!-- data para filtrar los platos -->
-                <img data-src="assets/pizza2.webp" alt="pizza">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="postre"> <!-- data para filtrar los platos -->
-                <img data-src="assets/postres1.webp" alt="postre">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="postre"> <!-- data para filtrar los platos -->
-                <img data-src="assets/postres2.webp" alt="postre">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="platillo" data-platillo="postre"> <!-- data para filtrar los platos -->
-                <img data-src="assets/postres2.webp" alt="postre">
-                <h2>Quinoa</h2>
-                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
-                <div class="precio">
-                    <p>$40.0</p>
-                    <button>comprar</button>
-                </div>
-            </div>
+        <div class="platillo" data-platillo="ensalada">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/ensalada2.webp" alt="ensalada" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
         </div>
+        <div class="platillo" data-platillo="ensalada">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/ensalada2.webp" alt="ensalada" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pasta">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/pasta1.webp" alt="pasta" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pasta">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/pasta2.webp" alt="pasta" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pasta">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/pasta2.webp" alt="pasta" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pizza">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pizza">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/pizza2.webp" alt="pizza" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pizza">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/pizza2.webp" alt="pizza" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="postre">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/postres1.webp" alt="postre" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="postre">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/postres2.webp" alt="postre" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="postre">
+          <!-- data para filtrar los platos -->
+          <img data-src="assets/postres2.webp" alt="postre" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-cash-register"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--separador de pagina-->
+    <div class="separador">
+      <div class="contenido-separador contenedor">
+        <h2>Comida italiana para empezar el dia</h2>
+        <p>Empieza el día comiendo un delicioso desayuno o un café italiano</p>
+        <a href="#" class="btn btn-verde">ordena ahora</a>
+      </div>
+    </div>
+    <section class="chef contenedor">
+      <h2>Chef ejecutivo</h2>
+      <div class="contenido-chef">
+        <div class="texto-chef">
+          <h3>
+            La exelencia está en la diversidad y el modo de progresar es conocer
+            y comparar las diversidades de productos, culturas y técnicas
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum vero
+            sapiente aliquid officiis laudantium expedita fugiat! Quae, suscipit
+            nostrum voluptatibus quis labore iure dolore facilis, ea similique
+            temporibus ipsa quidem.
+          </p>
+          <a href="#" class="btn btn-verde">Leer biografía</a>
+        </div>
+        <div class="imagen-chef">
+          <img data-src="assets/chef.webp" alt="fotografia del chef" />
+        </div>
+      </div>
     </section>
 
     <!-- ✅ load jQuery ✅ -->
@@ -189,6 +245,6 @@
       crossorigin="anonymous"
     ></script>
 
-     <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
