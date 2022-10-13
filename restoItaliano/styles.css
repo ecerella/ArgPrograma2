@@ -399,3 +399,113 @@ video{
 .texto-chef p{
     font-size: 2rem;
 }
+.formulario-contacto{
+    padding-top: 5rem;
+}
+/*formulario contacto*/
+@media(min-width:768px){
+    .formulario-contacto{
+        display: flex;
+    }
+}
+.informacion-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.informacion-contacto, .formulario{
+    flex: 0 0 calc(50% - 1rem);
+}
+.informacion-contacto{
+    background-color: var(--oscuro);
+    padding: 2rem;
+}
+.informacion-contacto h3, .informacion-contacto p, .redes-sociales i{
+    color: var(--blanco);
+}
+.informacion-contacto h3{
+    font-size: 4rem;
+    font-family: var(--titulos);
+}
+.informacion-contacto p{
+    font-size: 2.2rem;
+}
+.informacion-contacto i{
+    margin-right: 1rem;
+}
+.redes-sociales{
+    font-size: 3rem;
+}
+.formulario{
+    padding: 5rem;
+}
+.input-formulario label{
+    display: block;
+    font-size: 2rem;
+    font-family: var(--parrafos);
+    margin-bottom: 1.5rem;
+}
+.input-formulario input, .input-formulario textarea{
+    width: 100%;
+}
+.input-formulario input, .input-formulario textarea{
+    padding: 1rem 1.5rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    outline: none;
+    font-family: var(--parrafos);
+}
+.input-formulario textarea{
+    height: 20rem;
+    resize: none;
+}
+.pie-pagina{
+    margin-top: 5rem;
+    background-color: rgb(20, 20, 20);
+    padding: 5rem;
+}
+@media (min-width: 768px){
+    .contenedor-piepagina{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.info{
+    flex: 0 0 calc(25% - 1rem);
+    margin-bottom: 2rem;
+}
+.info h3, .info p{
+    color: var(--blanco);
+    text-align: center;
+}
+.info h3{
+    font-size: 2.2rem;
+}
+.info p{
+    font-size: 1.8rem;
+}
+.redes-pie{
+    text-align: center;
+}
+.info input[type="email"]{  /*selecciono los input pero solo clase email*/
+    font-family: var(--parrafos);
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+.info input[type="submit"]{
+    padding: .5rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 0;
+}
+.footer{
+    text-align: center;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 2rem;
+    font-size: 2rem;
+}
