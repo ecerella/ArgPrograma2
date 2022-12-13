@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/baa6b75a34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/portfolioMaqueta/css/styles.css">
+
+
+    <title>dashboard</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/portfolioMaqueta/index.html"><img src="/portfolioMaqueta/img/APLogo.png" alt="APLogo" width="140"></a>
+            <ul class="list-group list-group-horizontal">
+
+                    <!-- Button que envia a login -->
+                    <button title="modal" type="button" class="btn" >
+                    <a href="/portfolioMaqueta/login.html"><i class="fa-solid fa-user text-white"></i></a>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-1">
+          </div>
+          <div class="col-2 pt-5">
+            <ul class="list-group">
+                <li class="list-group-item adm"><a href="#"data-bs-toggle="modal" data-bs-target="#redesModal" class="lk"><i class="fa-solid fa-passport"></i> redes</a></li>
+                <li class="list-group-item adm"><a href="#"data-bs-toggle="modal" data-bs-target="#banerModal" class="lk"><i class="fa-solid fa-image"></i> baner</a></li>
+                <li class="list-group-item adm"><a href="#"data-bs-toggle="modal" data-bs-target="#inforModal" class="lk"><i class="fa-solid fa-comment"></i> infor</a></li>
+                <li class="list-group-item adm"><a href="#"data-bs-toggle="modal" data-bs-target="#experModal" class="lk"><i class="fa-solid fa-layer-group"></i> exper</a></li>
+                <li class="list-group-item adm"><a href="#"data-bs-toggle="modal" data-bs-target="#educaModal" class="lk"><i class="fa-solid fa-book"></i> educa</a></li>
+                <li class="list-group-item adm"><a href="#"data-bs-toggle="modal" data-bs-target="#skillsModal" class="lk"><i class="fa-solid fa-sliders"></i> skills</a></li>
+                <li class="list-group-item adm"><a href="#"data-bs-toggle="modal" data-bs-target="#proyeModal" class="lk"><i class="fa-solid fa-pen-to-square"></i> proye</a></li>
+              </ul>
+        </div>
+        <div class="col-8">
+
+    <!-- inicio redes Modal -->
+    <div class="modal fade" id="redesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal redes</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+  
+              <!--Texto input formularios o botones para este espacio-->
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-1">   
+                </div>
+                <div class="col-10">
+                  <form>
+                      <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Nombre de Red</label>
+                        <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp">
+                      </div>
+                    </form>
+                </div>
+                <div class="col-1">
+                </div>
+              </div>
+            </div>
+            <!--botones-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Borrar</button>
+            <button type="button" class="btn btn-primary">agregar</button>
+          </div>
+        </div>
+      </div>
+    </div> <!--fin redes modal-->
+
+  <!-- inicio baner Modal -->
+  <div class="modal fade" id="banerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal baner</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <!--Texto input formularios o botones para este espacio-->
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-1">   
+              </div>
+              <div class="col-10">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputName" class="form-label">Nombre y apellido</label>
+                      <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputTitle" class="form-label">Titulo</label>
+                      <input type="title" class="form-control" id="exampleInputTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputUrl" class="form-label">Url-imagen</label>
+                        <input type="url" class="form-control" id="exampleInputUrl">
+                      </div>
+                  </form>
+              </div>
+              <div class="col-1">
+              </div>
+            </div>
+          </div>
+          <!--botones-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">guardar</button>
+        </div>
+      </div>
+    </div>
+  </div> <!--fin baner modal-->
+
+    <!-- inicio infor Modal -->
+    <div class="modal fade" id="inforModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal inforacion</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+  
+              <!--Texto input formularios o botones para este espacio-->
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-1">   
+                </div>
+                <div class="col-10">
+                  <form>
+                      <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">url imagen</label>
+                        <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputTitle" class="form-label">texto presentacion</label>
+                        <input type="title" class="form-control" id="exampleInputTitle">
+                      </div>
+                    </form>
+                </div>
+                <div class="col-1">
+                </div>
+              </div>
+            </div>
+            <!--botones-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">guardar</button>
+          </div>
+        </div>
+      </div>
+    </div> <!--fin infor modal-->
+
+      <!-- inicio exper Modal -->
+  <div class="modal fade" id="experModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal experiencia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <!--Texto input formularios o botones para este espacio-->
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-1">   
+              </div>
+              <div class="col-10">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputName" class="form-label">url imagen</label>
+                      <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputTitle" class="form-label">Texto experiencia</label>
+                      <input type="title" class="form-control" id="exampleInputTitle">
+                    </div>
+                  </form>
+              </div>
+              <div class="col-1">
+              </div>
+            </div>
+          </div>
+          <!--botones-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">guardar</button>
+        </div>
+      </div>
+    </div>
+  </div> <!--fin exper modal-->
+
+    <!-- inicio educa Modal -->
+    <div class="modal fade" id="educaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal educacion</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+  
+              <!--Texto input formularios o botones para este espacio-->
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-1">   
+                </div>
+                <div class="col-10">
+                  <form>
+                      <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Titulo</label>
+                        <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputTitle" class="form-label">Texto</label>
+                        <input type="title" class="form-control" id="exampleInputTitle">
+                      </div>
+                      <div class="mb-3">
+                          <label for="exampleInputUrl" class="form-label">Url-imagen</label>
+                          <input type="url" class="form-control" id="exampleInputUrl">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-1">
+                </div>
+              </div>
+            </div>
+            <!--botones-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Borrar</button>
+            <button type="button" class="btn btn-primary">guardar</button>
+          </div>
+        </div>
+      </div>
+    </div> <!--fin educa modal-->
+
+      <!-- inicio skills Modal -->
+  <div class="modal fade" id="skillsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal skills</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <!--Texto input formularios o botones para este espacio-->
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-1">   
+              </div>
+              <div class="col-10">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputName" class="form-label">Nombre</label>
+                      <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputTitle" class="form-label">Porcentaje</label>
+                      <input type="title" class="form-control" id="exampleInputTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputUrl" class="form-label">Url-imagen</label>
+                        <input type="url" class="form-control" id="exampleInputUrl">
+                      </div>
+                  </form>
+              </div>
+              <div class="col-1">
+              </div>
+            </div>
+          </div>
+          <!--botones-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Borrar</button>
+          <button type="button" class="btn btn-primary">guardar</button>
+        </div>
+      </div>
+    </div>
+  </div> <!--fin skills modal-->
+
+    <!-- inicio proye Modal -->
+    <div class="modal fade" id="proyeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal proyectos</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+  
+              <!--Texto input formularios o botones para este espacio-->
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-1">   
+                </div>
+                <div class="col-10">
+                  <form>
+                      <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Titulo</label>
+                        <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputTitle" class="form-label">Texto</label>
+                        <input type="title" class="form-control" id="exampleInputTitle">
+                      </div>
+                      <div class="mb-3">
+                          <label for="exampleInputUrl" class="form-label">Url-imagen</label>
+                          <input type="url" class="form-control" id="exampleInputUrl">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-1">
+                </div>
+              </div>
+            </div>
+            <!--botones-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Borrar</button>
+            <button type="button" class="btn btn-primary">guardar</button>
+          </div>
+        </div>
+      </div>
+    </div> <!--fin proye modal-->
+
+        </div>
+        <div class="col-1">
+        </div>
+        </div>
+    </div>
+
+      <section class="presentacion mt-5">
+        <nav class="navbar navbar-expand-lg bg-black">
+          <div class="container-fluid">
+            <div class="container d-flex justify-content-center">
+              <h6 class="mt-10 pt-6 text-white">© Copyright ezequiel cerella 2022</h6>
+          </div>
+        </nav>
+      </section>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
